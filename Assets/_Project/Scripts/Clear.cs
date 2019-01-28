@@ -3,7 +3,7 @@ using Zenject;
 
 namespace PixelCurio.GGJ2019
 {
-    public class Character : MonoBehaviour
+    public class Clear : MonoBehaviour
     {
         [Inject] private readonly Output _output;
 
@@ -33,7 +33,7 @@ namespace PixelCurio.GGJ2019
             if(_isActive && Time.time - _activeTime > REGISTER_TIME)
             {
                 Debug.Log($"Registered the letter: {gameObject.name}");
-                _output.AppendText(gameObject.name);
+                _output.SetText("");
                 _activeTime = Time.time;
             }
         }
