@@ -6,7 +6,7 @@ namespace PixelCurio.GGJ2019
     {
         public override void InstallBindings()
         {
-            
+            Container.BindInterfacesAndSelfTo<MixerManager>().AsSingle().NonLazy();
         }
     }
 }
