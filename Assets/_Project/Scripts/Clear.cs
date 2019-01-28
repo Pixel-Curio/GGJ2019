@@ -6,6 +6,8 @@ namespace PixelCurio.GGJ2019
     public class Clear : MonoBehaviour
     {
         [Inject] private readonly Output _output;
+        [Inject] private readonly QuestionView _questionView;
+        [Inject] private readonly JsonObjects _jsonObjects;
 
         private const float REGISTER_TIME = 4f;
 
@@ -33,6 +35,7 @@ namespace PixelCurio.GGJ2019
             if(_isActive && Time.time - _activeTime > REGISTER_TIME)
             {
                 Debug.Log($"Registered the letter: {gameObject.name}");
+                _questionView.SetText(_jsonObjects.GetRandomQuestion());
                 _output.SetText("");
                 _activeTime = Time.time;
             }

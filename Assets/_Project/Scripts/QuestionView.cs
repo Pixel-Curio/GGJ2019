@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using Zenject;
 
@@ -15,5 +13,7 @@ namespace PixelCurio.GGJ2019
         {
             _questionText.text = _jsonObjects.GetRandomQuestion();
         }
+
+        public void SetText(string text) => _questionText.text = text;
     }
 }
