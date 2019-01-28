@@ -28,7 +28,6 @@ namespace PixelCurio.GGJ2019
             _combinedPosition.x += e.Position.x;
             _combinedPosition.y += e.Position.y;
             _count++;
-            Debug.Log($"{viewName} at: {e.Position}");
         }
 
         public void Tick()
